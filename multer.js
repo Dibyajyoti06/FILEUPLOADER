@@ -50,6 +50,20 @@ app.post('/cool-profile', cpUpload, function (req, res, next) {
   // The 'gallery' field is configured with maxCount: 8, meaning it allows a maximum of 8 files to be uploaded.
 });
 
+// app.post('/profile', function (req, res) {
+//   upload(req, res, function (err) {
+//     if (err instanceof multer.MulterError) {
+//       console.log('MulterError:', err.message);
+//       res.status(400).send('File upload error: ' + err.message);
+//     } else if (err) {
+//       console.error('Unknown error during file upload:', err);
+//       res.status(500).send('An unknown error occurred when uploading.');
+//     }
+//     console.log(req.file);
+//     return res.render('homepage');
+//   });
+// });
+
 app.listen(PORT, () => {
   console.log(`Server is started at port ${PORT}`);
 });
